@@ -42,7 +42,7 @@ The script will carry out the following actions;
 - Checks the pre-requisite files are present and the file checksums match those in the Config.xml file.
 - Installs the required IIS Web Servers roles including management tools.
 - Extracts PHP zip file to PHP directory.
-- Copies preconfigure php.ini file to PHP directory.
+- Copies preconfigured php.ini file to PHP directory.
 - Sets the extension_dir in php.ini to the PHP directory.
 - Configures the Server System Environmental Variable.
 - Copies Wincache dll to PHP Ext directory.
@@ -76,7 +76,7 @@ These parameters are all contained within the Config.xml file (located in the Bu
 
 | Parameter | Default Setting | Description |
 | :--- | :--- | :--- |
-| supported_version | 2016 | This is the version of Windows Server the package is applicable to. Server 2016 in this case. |
+| supported_version | Specified in Config.xml | This is the version of Windows Server the package is applicable to. Server 2016 and 2019 are the only supported Operating Systems so far. |
 
 <p><br /><br /></p>
 
