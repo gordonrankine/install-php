@@ -97,9 +97,9 @@ These parameters are all contained within the Config.xml file (located in the Bu
 
 | Parameter | Default Setting | Description |
 | :--- | :--- | :--- |
-| version | 2.0.0.8 Alpha | This is the version of the php_wincache.dll file to be installed. Wincache is available from https://sourceforge.net/projects/wincache/ |
+| version | 2.0.0.8 | This is the version of the php_wincache.dll file to be installed. Wincache is available from https://sourceforge.net/projects/wincache/ |
 | filename | php_wincache.dll | This is the name of the Wincache file that is copied to the PHP extensions directory. |
-| sha256 | BCAFCC07FC7DAC5DD6EE20B9FCAB7327980D7CECBA857E8DEC69CDA6DFFA47E0 | This is the SHA256 file checksum of the php_wincache.dll. |
+| sha256 | 4E230890C8071370047BD1C297BE9724FC80A0C32C2D308B17500AE6C70C7E15 | This is the SHA256 file checksum of the php_wincache.dll. |
 
 <p><br /><br /></p>
 
@@ -124,9 +124,15 @@ These parameters are all contained within the Config.xml file (located in the Bu
 
 <p><br /><br /></p>
 
+## Updates
+
+- 25th Jan 2020: php_wincache.dll 2.0.0.8 Alpha (wincache-2.0.0.8-dev-7.4.0alpha1-nts-vs16-x64.exe) replaced with php_wincache.dll 2.0.0.8 (wincache-2.0.0.8-dev-7.4-nts-vc15-x64.exe) in build packages.
+
+<p><br /><br /></p>
+
 ## Future Updates
 
-- New build package once Wincache for PHP 7.4 is officially released.
+Nothing planned. Request via GitHub.
 
 <p><br /><br /></p>
 

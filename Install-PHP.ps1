@@ -21,11 +21,14 @@ https://github.com/gordonrankine/install-php
 
 .NOTES
 License:            MIT License
-Compatibility:      Server 2016
+Compatibility:      Server 2016 & 2019
 Author:             Gordon Rankine
-Date:               02/01/2020
-Version:            1.0
+Date:               25/01/2020
+Version:            1.1
 PSSscriptAnalyzer:  Pass.
+Change History:     Version  Date        Author          Details
+                    1.0      02/01/2020  Gordon Rankine  Initial script.
+                    1.1      25/01/2020  Gordon Rankine  Removed information about WinCache still being in development.
 
 #>
 
@@ -744,6 +747,7 @@ fnCreateDir ($($xml.info.iis.site_path) + "\" + $($xml.info.iis.site_name))
     Write-Output "[WARNING] Server needs a reboot to complete configuration."
     Write-Output "[WARNING] Please reboot server then open http://localhost/$($xml.info.iis.site_name)/index.php in Internet Explorer."
     Write-Output "[WARNING] index.php should display PHP Info in Internet Explorer."
+    Write-Output ""
     Break
     }
     else{
@@ -754,14 +758,4 @@ fnCreateDir ($($xml.info.iis.site_path) + "\" + $($xml.info.iis.site_name))
 # Check PHP works
 Write-Output "[INFO] Now opening Internet Explorer to check all works. You should see a PHP Info page."
 Start-Process "C:\Program Files\Internet Explorer\iexplore.exe" -ArgumentList "http://localhost/$($xml.info.iis.site_name)/index.php"
-
-# Wincache Info
-Write-Output ""
-Write-Output "[INFO] Note: The php_wincahce.dll for PHP 7.4 is still in development and doesn't currently work."
-Write-Output "[INFO] You will see an error if you open $($xml.info.php.install_directory)\php-cgi.exe."
-Write-Output "[INFO] Please check https://forums.iis.net/t/1242776.aspx?+Pre+Release+WinCache+for+PHP+7+3+and+PHP+7+4alpha1 for more info."
-Write-Output "[INFO] The php_wincache.dll is in the current configuration but it won't load."
-Write-Output "[INFO] To remove this, open $($xml.info.php.install_directory)\php.ini and comment out the line extension=php_wincache.dll."
-Write-Output "[INFO] Then restart IIS by typing IIS Reset in to an administrative command prompt."
-Write-Output ""
 #endregion Finalise
